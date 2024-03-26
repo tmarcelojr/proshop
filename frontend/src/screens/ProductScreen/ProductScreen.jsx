@@ -25,6 +25,9 @@ export const ProductScreen = () => {
                 <ListGroupItem>
                     Price: ${product.price}
                 </ListGroupItem>
+                <ListGroupItem>
+                    Description: {product.description}
+                </ListGroupItem>
             </ListGroup>
         </Col>
 
