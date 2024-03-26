@@ -7,11 +7,14 @@
   "scripts": {
     "start": "nodemon backend/server",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run start\" \"npm run client\""
+    "dev": "concurrently \"npm run start\" \"npm run client\"",
+    "data:import": "node backend/config/seed",
+    "data:destroy": "node backend/config/seed -d"
   },
   "author": "Teo Marcelo",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.19.2",
     "mongoose": "^8.2.3"
   },

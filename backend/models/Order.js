@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import Review from "./Review";
 
 const orderSchema = new mongoose.Schema(
   {
