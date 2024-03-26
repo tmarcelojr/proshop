@@ -12,7 +12,8 @@
   "author": "Teo Marcelo",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mongoose": "^8.2.3"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
