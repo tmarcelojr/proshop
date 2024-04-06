@@ -10,6 +10,8 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store.js";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import { ProductScreen } from "./screens/ProductScreen/ProductScreen";
 
