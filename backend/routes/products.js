@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import asyncHandler from "../middlewares/asynchandler.js";
+import asyncHandler from "../middlewares/asyncHandler.js";
 import Product from "../models/Product.js";
 
 router.get(
@@ -16,11 +16,12 @@ router.get(
   asyncHandler(async (req, res) => {
     const product = await Product.findById(req.params.id);
 
-    if (product) res.json(product);
-
-    res.status(404).json({
-      message: "Product not found.",
-    });
+    if (product) {
+      return res.json(product);
+    } else {
+      res.status(400);
+      throw new Error("Resource not found");
+    }
   })
 );
 
